@@ -59,7 +59,7 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
               className="dot"
               cx={xScale(getXFromPointsRange(point))}
               cy={yScale(getYFromPointsRange(point))}
-              r={5}
+              r={5} // 여기가 점 크기이다
               fill="purple"
             />
           ))}
