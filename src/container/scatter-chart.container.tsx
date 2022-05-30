@@ -6,7 +6,7 @@ import React, { useMemo, useRef } from "react";
 import { getXFromPointsRange, getYFromPointsRange } from "../lib/data-util";
 import { genMockPoints } from "../lib/mock-data-util";
 
-const pointsMock = genMockPoints(600);
+const pointsMock = genMockPoints(10);
 
 export type ScatterChartContainerProps = {
   width: number;
