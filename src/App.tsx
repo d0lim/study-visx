@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <ScatterChartContainer />
+      <ScatterChartContainer width={600} height={400} />
     </div>
   );
 }
