@@ -1,3 +1,4 @@
+import { AxisBottom, AxisLeft } from "@visx/axis";
 import { GradientSteelPurple } from "@visx/gradient";
 import { Group } from "@visx/group";
 import { scaleLinear } from "@visx/scale";
@@ -51,6 +52,8 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
           left={defaultMargin.left}
           top={defaultMargin.top}
         >
+          <AxisBottom scale={xAxisScale} top={yMax} />
+          <AxisLeft scale={yAxisScale} />
           {pointsMock.map((point, i) => (
             <Circle
               key={`point-${point[0]}-${i}`}
