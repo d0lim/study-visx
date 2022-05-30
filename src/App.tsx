@@ -1,7 +1,4 @@
 import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import ScatterChartContainer from "./container/scatter-chart.container";
 import { Link } from "react-router-dom";
 
 function App() {
