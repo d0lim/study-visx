@@ -45,8 +45,7 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
   return (
     <div style={{ margin: "50px" }}>
       <svg width={width} height={height} ref={svgRef}>
-        <GradientSteelPurple id="dots-purple" />
-        <rect width={width} height={height} rx={10} fill="url(#dots-purple)" />
+        <rect width={width} height={height} rx={10} fill="white" />
         <Group
           pointerEvents="none"
           left={defaultMargin.left}
@@ -61,7 +60,7 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
               cx={xScale(getXFromPointsRange(point))}
               cy={yScale(getYFromPointsRange(point))}
               r={5}
-              fill="white"
+              fill="purple"
             />
           ))}
         </Group>
