@@ -38,7 +38,7 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
     <div>
       <svg width={width} height={height} ref={svgRef}>
         <GradientSteelPurple id="dots-purple" />
-        <rect width={width} height={height} rx={14} fill="url(#dots-purple)" />
+        <rect width={width} height={height} rx={10} fill="url(#dots-purple)" />
         <Group pointerEvents="none">
           {pointsMock.map((point, i) => (
             <Circle
