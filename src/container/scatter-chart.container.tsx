@@ -1,10 +1,9 @@
 import { AxisBottom, AxisLeft } from "@visx/axis";
 import localPoint from "@visx/event/lib/localPointGeneric";
-import { GradientSteelPurple } from "@visx/gradient";
 import { Group } from "@visx/group";
 import { scaleLinear } from "@visx/scale";
 import { Circle } from "@visx/shape";
-import { Tooltip, useTooltip } from "@visx/tooltip";
+import { TooltipWithBounds, useTooltip } from "@visx/tooltip";
 import React, { useCallback, useMemo, useRef } from "react";
 import { getXFromPointsRange, getYFromPointsRange } from "../lib/data-util";
 import { genMockPoints } from "../lib/mock-data-util";
@@ -112,14 +111,14 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
         </Group>
       </svg>
       {tooltipOpen && tooltipData && tooltipLeft != null && tooltipTop != null && (
-        <Tooltip left={tooltipLeft + 10} top={tooltipTop + 10}>
-          <div>
+        <TooltipWithBounds left={tooltipLeft + 10} top={tooltipTop + 10}>
+          <div style={{ width: "200px" }}>
             <strong>x:</strong> {tooltipData[0]}
           </div>
           <div>
             <strong>y:</strong> {tooltipData[1]}
           </div>
-        </Tooltip>
+        </TooltipWithBounds>
       )}
     </div>
   );
