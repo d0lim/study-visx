@@ -73,8 +73,8 @@ function ScatterChartContainer({ width, height }: ScatterChartContainerProps) {
       if (!currentPoint) return;
       else {
         showTooltip({
-          tooltipLeft: xScale(currentPoint.x),
-          tooltipTop: yScale(currentPoint.y),
+          tooltipLeft: currentPoint.x,
+          tooltipTop: currentPoint.y,
           tooltipData: [currentPoint.x, currentPoint.y, 0],
         });
       }
